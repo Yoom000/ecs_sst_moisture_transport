@@ -7,8 +7,8 @@ This project investigates the relationship between East China Sea (ECS) summer s
 
 The workflow reproduces the methodology of the study, including SST event definition, moisture flux calculation, t-test, and composite analysis
 
-
-##Project Structure
+```
+## Project Structure
 ├── main.py
 ├── requirements.txt
 ├── module/
@@ -18,23 +18,25 @@ The workflow reproduces the methodology of the study, including SST event defini
 ├── composites/
 ├── plot/
 └── data/
+```
 
 - module/ contains the core calculation (eg. SST climatology, moisture_flux, t-test) 
 - composites/ contains codes for composite analysis .
 - plot/ contains codes used to generate figures.
 
 
-##Objective
+## Objective
 The code package consists of five main steps:
-
+    ```
     1. Compute JJA SST climatology 
     2. Compute JJA ECS SST anomaly
     3. Define high/low SST years (HSST / LSST) using ±1 standard deviation
     4. Perform two-sample t-test to evaluate statistical significance
     5. Composite analysis (IWV, LHF, SLP, wind fields) 
+    ```
 
 
-##Workflow
+## Workflow
 Step 1 — Main analysis
 
 Run python main.py 
@@ -52,7 +54,7 @@ Run python main.py
 	Results are saved to: (data/interim/) and (data/final)
 
 
-# (Plotting codes in Step 2 and 3 use resulting data file from step1, so make sure you run main.py first)
+Plotting codes in Step 2 and 3 use resulting data file from step1, so make sure you run main.py first
 
 
 Step 2 - Plotting figures(optional)
@@ -72,7 +74,7 @@ Step 3 - Composite analysis
 	
 	-The plotted figure will be saved in plot/ as .png
 
-##Data
+## Data
 
 ERA5 climate data are used in this study. 
 Download available at: https://cds.climate.copernicus.eu/datasets
@@ -87,12 +89,13 @@ The following ERA5 raw data files (.nc) must exist in data/raw:
 		2.1 u/v wind component
 		2.2 Specific humidity
 	
-##Environment
+## Environment
 
-Developed and tested in Python 3.11.
+Developed and tested in `Python 3.11.`
 
 Required packages:
 
+```
 numpy
 pandas
 xarray
@@ -100,15 +103,16 @@ scipy
 matplotlib
 netCDF4
 cartopy
+```
 
 Install using:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
 For stable installation of cartopy, installation via conda is recommended:
 
-conda install -c conda-forge numpy pandas xarray scipy matplotlib netcdf4 cartopy
+`conda install -c conda-forge numpy pandas xarray scipy matplotlib netcdf4 cartopy`
 
 
 
