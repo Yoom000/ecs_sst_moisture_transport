@@ -54,7 +54,7 @@ Run python main.py
 	Results are saved to: (data/interim/) and (data/final)
 
 
-Plotting codes in Step 2 and 3 use resulting data file from step1, so make sure you run main.py first
+- Plotting codes in Step 2 and 3 use resulting data file from step1, so make sure you run main.py first
 
 
 Step 2 - Plotting figures(optional)
